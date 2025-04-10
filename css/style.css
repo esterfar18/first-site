@@ -20,6 +20,7 @@ body{
     color: var(--cor-texto);
 }
 
+/* Titulo e texto */
 h1, h2, h3, h4, h5, h6 {
     color: var(--cor-primaria);
     margin-bottom: 1rem;
@@ -42,16 +43,25 @@ p {
     color: var(--cor-texto);
 }
 
+
+
+/* Container centralizado */
 .container {
     width: 80%;
     margin: 0 auto;
 }
 
-
+/* Header com Flexbox */
 .cabecario {
     background-color: var(--cor-primaria);
     color: var(--cor-clara);
     padding: 1rem 0;
+}
+
+.cabecario .container { 
+    display:flex;                    /* Flexbox para alinhar logo e menu */     
+    justify-content: space-between;  /* Espaço entre os elementos */
+    align-items: center;              /* Centraliza verticalmente */
 }
 
 .logo {
@@ -59,8 +69,8 @@ p {
 }
 
 .menu {
-    display: flex;
-    gap: 2rem;
+    display: flex;           /* Flexbox para menu horizontal */
+    gap: 2rem;                /* Espaço entre itens do menu */
     list-style: none;
 }
 
@@ -86,13 +96,18 @@ p {
     color: white;
     text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
     text-align: left;
+    font-size: clamp(2rem, 5vw, 3rem);
 }
 
+.banner p {
+    color: white;
+    text-shadow: 15px 10px 20px rgba(0,0,0,0.5);
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
 
-.cabecario .container { 
-    display:flex;
-    justify-content: space-between;
-    align-items: center;
+.banner a { 
+    color: white;
 }
 
 
@@ -111,4 +126,26 @@ p {
     object-fit: cover;
     object-position: center;          /* Centraliza o vídeo */
 }
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6)
+}
+
+/* Conteudo do banner com largura fixa */
+.banner .container { 
+    max-width: 600px;
+    text-align: left;
+
+}
+
+
+
+
+
+
 

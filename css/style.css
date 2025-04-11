@@ -81,6 +81,22 @@ p {
     padding: 0.5rem 0;
 }
 
+/* Efeito hover com pseudo-elemento */
+.menu a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--cor-destaque);
+    transition: width 0.3s ease;
+}
+
+.menu a:hover::after {
+    width: 100%;
+}
+
 /* Banner com posicionamento absoluto */
 .banner {
     position: relative;
@@ -136,11 +152,94 @@ p {
     background: rgba(0, 0, 0, 0.6)
 }
 
+
 /* Conteudo do banner com largura fixa */
 .banner .container { 
     max-width: 600px;
     text-align: left;
 
+}
+
+/* Seção Sobre com Grid */
+.sobre {
+    padding: 4rem 0;
+}
+
+.sobre-conteudo {
+    grid-template-columns: 1fr 1fr;                                     
+    gap: 2rem;
+    align-items: center;
+    display: grid;
+}
+
+.sobre-conteudo img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: var(--sombra);
+}
+
+.sobre-texto h3 {
+    color: var(--cor-primaria);
+}
+
+.sobre-texto ul {
+    list-style: none;
+    margin-top: 2rem;
+}
+
+.sobre-texto li { 
+    margin-bottom: 0.5rem;
+    padding-left: 1.5 rem;
+    position: relative;
+}
+
+.sobre-texto li::before{
+    content: "•";
+    color: blue;
+    position: absolute;
+    left: -15px;
+
+}
+
+/* Seção Conteúdo com Flexbox */
+.conteudo {
+    padding: 4rem 0;
+    background: var(--cor-clara);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.botao { 
+    background-color: var(--cor-primaria);
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 7px;
+    padding: 0.8rem 2rem;
+    transition: all 0.2s;
+}
+
+
+
+
+
+
+
+
+
+
+.botao:hover {
+    background: rgb(56, 6, 130);
+    transform:translateY(-2px);
 }
 
 

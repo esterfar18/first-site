@@ -6,6 +6,7 @@
     --cor-texto: #333;
     --cor-clara: #f9f9f9;
     --sombra: 0 3px 10px rgba(0,0,0,0.1);
+    --cor-terciaria: #0e476d;
 }
 /* Reset layout navegador */
 * {

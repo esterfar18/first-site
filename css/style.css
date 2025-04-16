@@ -4,7 +4,9 @@
     --cor-segundaria: #0e476d;
     --cor-destaque: #e74c3c;
     --cor-texto: #333;
-    --cor-clara: #f9f9f9;
+    --cor-texto: #333;
+
+    --cor-gg: #333
     --sombra: 0 3px 10px rgba(0,0,0,0.1);
 }
 /* Reset layout navegador */
